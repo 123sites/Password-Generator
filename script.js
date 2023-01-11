@@ -20,30 +20,39 @@ function writePassword() {
 
   passwordText.value = password;
 }
+
 // 1-RandomLower
 function getRandomLower () {
 }
 console.log(getRandomLower())
+
 
 // 2-RandomUpper
 function getRandomUpper () {
 }
 console.log(getRandomUpper())
 
+
 // 3-RandomIntInclusive
-function getRandomIntInclusive(min, max) {
-  min = Math.ceil(0);
-  max - Math.floor(9);
-  return Math.floor(Math.random() * (max - min + 1) + min); 
-}
+// function getRandomIntInclusive(min, max) {
+//   min = Math.ceil(0);
+//   max - Math.floor(9);
+//   return Math.floor(Math.random() * (max - min + 1) + min); 
+// }
+let x = Math.floor((Math.random() * 9) + 0);
+
 
 // 4-RandomSpecialCharacters
-function getRandomSpecialCharacters () {
-  const symbols = '~!@#$%^&*()_+=:;<>/?.,';
-  return symbols(Math.floor(Math.random()))
+let symbol = "?"
+function getRandomSymbol () {
+  //const characters = '~!@#$%^&*()_+=:;<>/?.,';
+  const symbol = ["'", "~", "!", "@", "#", "$", "%", "^", "&", 
+  "*", "(", ")", "+", "=", "<", ">", "/", "?"]
+  return symbol[Math.floor(Math.random() * symbol.length)];
 }
 
-console.log(getRandomSpecialCharacters())
+
+console.log(getRandomSymbol())
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
