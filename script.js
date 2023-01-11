@@ -67,10 +67,10 @@ console.log(getRandomUpper())
 // }
 let number = "0"
 function getRandomNumber () {
-  //const number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-  return String.fromCharCode(Math.floor(Math.random()) * number.length);
-
+  const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  return numbers[Math.floor(Math.random()) * number.length];
 }
+console.log(getRandomNumber())
 
 // 4-RandomSpecialCharacters
 // THIS WORKS!!!!!!!!!!!!!!!!!!!!
