@@ -6,6 +6,15 @@
 // Afterwards, a password is displayed in an alert or written to the page.
 
 var generateBtn = document.querySelector("#generate");
+//DOM elements
+const resultEl = document.getElementById('result');
+const lengthEl = document.getElementById('length');
+const lowercaseEl = document.getElementById('lowercase');
+const uppercaseEl = document.getElementById('uppercase');
+const numbersEl = document.getElementById('numbers');
+const symbolsEl = document.getElementById('symbols');
+const generateEl = document.getElementById('generate');
+const clipboardEl = document.getElementById('clipboard');
 
 function generatePassword(){
   console.log("Generate Password button clicked.");
@@ -33,6 +42,7 @@ console.log(getRandomLower())
 // 2-RandomUpper
 let upper = "A"
 function getRandomUpper () {
+  //const upper = [ASDFGHJKLZXCVBNMQWERTYUIOP]
   return String.fromCharCode(Math.floor(Math.random()) * 26 + 65);
 }
 console.log(getRandomUpper())
@@ -46,7 +56,7 @@ console.log(getRandomUpper())
 // }
 let number = "0"
 function getRandomNumber () {
-  const number = []
+  //const number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
   return String.fromCharCode(Math.floor(Math.random()) * 26 + 48);
 
 }
@@ -56,9 +66,9 @@ function getRandomNumber () {
 let symbol = "?"
 function getRandomSymbol () {
   //const characters = '~!@#$%^&*()_+=:;<>/?.,';
-  const symbol = ["'", "~", "!", "@", "#", "$", "%", "^", "&", 
+  const symbols = ["'", "~", "!", "@", "#", "$", "%", "^", "&", 
   "*", "(", ")", "+", "=", "<", ">", "/", "?"]
-  return symbol[Math.floor(Math.random() * symbol.length)];
+  return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
 
