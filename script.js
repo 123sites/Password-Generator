@@ -26,13 +26,24 @@ function generatePassword(){
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-  // const generatePassword = (length, hasLowercase, hasUppercase, hasNumbers, hasSymbols,)
+  
+  const generatePassword = (length, hasLowercase, hasUppercase, hasNumbers, hasSymbols)
   passwordText.value = password;
+}
+
+// Generates password counter
+function generatePassword(lower, upper, number, symbol, length) {
+let generatePassword = '';
+const typesCount = lower + upper + number + symbol;
+console.log('typesCount: ', typesCount);
+const typesArr = [{lower}, {upper}, {numer}, {symbol}]
+console.log('typesArr:', typesArr);
 }
 
 // 1-RandomLower
 let lower = "a"
 function getRandomLower () {
+  // const lowercaseLetters = characterCodes.map(code => String.fromCharCode(code)); DELETE THIS
   const lower = ["asdfghjklqwertyuiopzxcvbnm"];
   return String.fromCharCode(Math.floor(Math.random()) * 26 + 97);
 }
@@ -42,7 +53,7 @@ console.log(getRandomLower())
 // 2-RandomUpper
 let upper = "A"
 function getRandomUpper () {
-  //const upper = [ASDFGHJKLZXCVBNMQWERTYUIOP]
+  const upper = ["ASDFGHJKLZXCVBNMQWERTYUIOP"]
   return String.fromCharCode(Math.floor(Math.random()) * 26 + 65);
 }
 console.log(getRandomUpper())
@@ -57,7 +68,7 @@ console.log(getRandomUpper())
 let number = "0"
 function getRandomNumber () {
   //const number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-  return String.fromCharCode(Math.floor(Math.random()) * 26 + 48);
+  return String.fromCharCode(Math.floor(Math.random()) * number.length);
 
 }
 
