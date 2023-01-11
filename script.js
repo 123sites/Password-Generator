@@ -10,7 +10,7 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword(){
   console.log("Generate Password button clicked.");
 
- display = "Password will go here.";
+ return "Password will go here.";
 }
 
 // Write password to the #password input, including the criteria: 
@@ -20,24 +20,29 @@ function writePassword() {
 
   passwordText.value = password;
 }
-
+// 1-RandomLower
 function getRandomLower () {
 }
 console.log(getRandomLower())
 
-
+// 2-RandomUpper
 function getRandomUpper () {
 }
 console.log(getRandomUpper())
 
-
-function getRandomNumber () {
+// 3-RandomIntInclusive
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(0);
+  max - Math.floor(9);
+  return Math.floor(Math.random() * (max - min + 1) + min); 
 }
-console.log(getRandomNumber())
 
-
+// 4-RandomSpecialCharacters
 function getRandomSpecialCharacters () {
+  const symbols = '~!@#$%^&*()_+=:;<>/?.,';
+  return symbols(Math.floor(Math.random()))
 }
+
 console.log(getRandomSpecialCharacters())
 
 // Add event listener to generate button
