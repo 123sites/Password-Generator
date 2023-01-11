@@ -10,7 +10,7 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword(){
   console.log("Generate Password button clicked.");
 
-return "Password will go here.";
+ display = "Password will go here.";
 }
 
 // Write password to the #password input, including the criteria: 
