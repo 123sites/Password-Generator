@@ -1,7 +1,18 @@
 // Assignment Code
+// 8-128 characters long
+// Confirm whether or not to include lowrcase, upper, numneric, and/or special characters.
+// Input should be validated & at least 1 character type should be selected.
+// Afterwards, a password is displayed in an alert or written to the page.
+
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
+function generatePassword(){
+  console.log("Generate Password button clicked");
+
+return "Password will go here.";
+}
+
+// Write password to the #password input, including the criteria: 
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -9,6 +20,7 @@ function writePassword() {
   passwordText.value = password;
 
 }
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
