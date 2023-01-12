@@ -41,6 +41,9 @@ console.log('typesArr:', typesArr);
 }
 
 // 1-RandomLower
+function RandomLower(){
+  console.log("Lowercase letter: ");
+}
 let lower = "a"
 function getRandomLower () {
   // const lowercaseLetters = characterCodes.map(code => String.fromCharCode(code)); DELETE THIS
@@ -51,6 +54,9 @@ console.log(getRandomLower())
 
 
 // 2-RandomUpper
+function RandomLower(){
+  console.log("Uppercase letter: ");
+}
 let upper = "A"
 function getRandomUpper () {
   const upper = ["ASDFGHJKLZXCVBNMQWERTYUIOP"]
@@ -65,20 +71,39 @@ console.log(getRandomUpper())
 //   max - Math.floor(9);
 //   return Math.floor(Math.random() * (max - min + 1) + min); 
 // }
+function RandomNumber(){
+  console.log("Lowercase letter: ");
+}
 let number = "0"
 function getRandomNumber () {
   const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
   return numbers[Math.floor(Math.random()) * number.length];
 }
 console.log(getRandomNumber())
+// Generate numbers 0-9, including 0 and 9
+function generateRandomInteger (max) {
+  return Math.floor (Math.random() * (max - min + 1) + min);
+  let value1 = Math.random();
+  let value2 = Math.random() * 2.5;
+  let value3 = Math.floor(Math.random() * 9);
+  let value4 = generateRandomInteger(9);
+  let value5 = generateRandomInteerInRange(0, 9);
+}
 
 // 4-RandomSpecialCharacters
 // THIS WORKS!!!!!!!!!!!!!!!!!!!!
+function RandomSymbol (){
+  console.log("Lowercase letter: ");
+}
 let symbol = "?"
 function getRandomSymbol () {
   //const characters = '~!@#$%^&*()_+=:;<>/?.,';
   const symbols = ["'", "~", "!", "@", "#", "$", "%", "^", "&", 
   "*", "(", ")", "+", "=", "<", ">", "/", "?"]
+  let value1 = Math.random();
+  let value2 = Math.random() * 2.5;
+  let value3 = Math.floor (Math.random() * 10);
+
   return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
