@@ -6,109 +6,99 @@
 // Afterwards, a password is displayed in an alert or written to the page.
 
 var generateBtn = document.querySelector("#generate");
-//DOM elements
-const resultEl = document.getElementById('result');
-const lengthEl = document.getElementById('length');
-const lowercaseEl = document.getElementById('lowercase');
-const uppercaseEl = document.getElementById('uppercase');
-const numbersEl = document.getElementById('numbers');
-const symbolsEl = document.getElementById('symbols');
-const generateEl = document.getElementById('generate');
-const clipboardEl = document.getElementById('clipboard');
 
-function generatePassword(){
-  console.log("Generate Password button clicked.");
+function generatePassword() {
+  let passwordLength = prompt("Please choose how many characters you want it, between 8-128 characters in length.");
+  console.log(passwordLength)
+  let passwordLower = confirm ("Do you want at least 1 lowercase letter?");
+  let passwordUpper = confirm ("Do you want at least 1 uppercase letter?");
+  let passwordNumber = confirm ("Do you want at least 1 whole number between 0-9?");
+  let passwordSymbol = confirm ("Do you want at least 1 symbol?");
 
- return "Password will go here.";
+//   let password=""
+
+// password
+//   confirm
+//   forLoop (for 10 times)
+
+  return password;
 }
 
-// Write password to the #password input, including the criteria: 
+
+// Write password to the #password input, including the criteria:
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-  
-  const generatePassword = (length, hasLowercase, hasUppercase, hasNumbers, hasSymbols)
+
   passwordText.value = password;
 }
 
-// Generates password counter
-function generatePassword(lower, upper, number, symbol, length) {
-let generatePassword = '';
-const typesCount = lower + upper + number + symbol;
-console.log('typesCount: ', typesCount);
-const typesArr = [{lower}, {upper}, {numer}, {symbol}]
-console.log('typesArr:', typesArr);
-}
-
 // 1-RandomLower
-function RandomLower(){
+function RandomLower() {
   console.log("Lowercase letter: ");
 }
-let lower = "a"
-function getRandomLower () {
+
+function getRandomLower() {
   // const lowercaseLetters = characterCodes.map(code => String.fromCharCode(code)); DELETE THIS
   const lower = ["asdfghjklqwertyuiopzxcvbnm"];
-  return String.fromCharCode(Math.floor(Math.random()) * 26 + 97);
+  return String.fromCharCode(Math.floor(Math.random() * 26 + 97));
 }
-console.log(getRandomLower())
-
+console.log(getRandomLower());
 
 // 2-RandomUpper
-function RandomLower(){
+function RandomLower() {
   console.log("Uppercase letter: ");
 }
-let upper = "A"
-function getRandomUpper () {
-  const upper = ["ASDFGHJKLZXCVBNMQWERTYUIOP"]
-  return String.fromCharCode(Math.floor(Math.random()) * 26 + 65);
-}
-console.log(getRandomUpper())
 
+function getRandomUpper() {
+  const upper = "ASDFGHJKLZXCVBNMQWERTYUIOP";
+  return String.fromCharCode(Math.floor(Math.random() * 26 + 65));
+}
+console.log(getRandomUpper());
 
 // 3-RandomIntInclusive
 // function getRandomIntInclusive(min, max) {
 //   min = Math.ceil(0);
 //   max - Math.floor(9);
-//   return Math.floor(Math.random() * (max - min + 1) + min); 
+//   return Math.floor(Math.random() * (max - min + 1) + min);
 // }
-function RandomNumber(){
-  console.log("Lowercase letter: ");
+
+function getRandomNumber() {
+  const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  return numbers[Math.floor(Math.random() * numbers.length)];
 }
-let number = "0"
-function getRandomNumber () {
-  const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-  return numbers[Math.floor(Math.random()) * number.length];
-}
-console.log(getRandomNumber())
+console.log(getRandomNumber());
 // Generate numbers 0-9, including 0 and 9
-function generateRandomInteger (max) {
-  return Math.floor (Math.random() * (max - min + 1) + min);
-  let value1 = Math.random();
-  let value2 = Math.random() * 2.5;
-  let value3 = Math.floor(Math.random() * 9);
-  let value4 = generateRandomInteger(9);
-  let value5 = generateRandomInteerInRange(0, 9);
-}
 
 // 4-RandomSpecialCharacters
 // THIS WORKS!!!!!!!!!!!!!!!!!!!!
-function RandomSymbol (){
-  console.log("Lowercase letter: ");
-}
-let symbol = "?"
-function getRandomSymbol () {
-  //const characters = '~!@#$%^&*()_+=:;<>/?.,';
-  const symbols = ["'", "~", "!", "@", "#", "$", "%", "^", "&", 
-  "*", "(", ")", "+", "=", "<", ">", "/", "?"]
-  let value1 = Math.random();
-  let value2 = Math.random() * 2.5;
-  let value3 = Math.floor (Math.random() * 10);
 
+function getRandomSymbol() {
+  //const characters = '~!@#$%^&*()_+=:;<>/?.,';
+  const symbols = [
+    "'",
+    "~",
+    "!",
+    "@",
+    "#",
+    "$",
+    "%",
+    "^",
+    "&",
+    "*",
+    "(",
+    ")",
+    "+",
+    "=",
+    "<",
+    ">",
+    "/",
+    "?",
+  ];
   return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
-
-console.log(getRandomSymbol())
+console.log(getRandomSymbol());
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
