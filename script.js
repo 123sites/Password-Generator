@@ -9,11 +9,20 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
   let passwordLength = prompt("Please choose how many characters you want it, between 8-128 characters in length.");
-  console.log(passwordLength)
-  let passwordLower = confirm ("Do you want at least 1 lowercase letter?");
-  let passwordUpper = confirm ("Do you want at least 1 uppercase letter?");
-  let passwordNumber = confirm ("Do you want at least 1 whole number between 0-9?");
-  let passwordSymbol = confirm ("Do you want at least 1 symbol?");
+  console.log(passwordLength);
+  let value = RandomLower;
+  // passwordLength = confirm("");
+
+
+  // let passwordLower = 
+  // let passwordLower = confirm ("Do you want at least 1 lowercase letter?")
+  // console.log(passwordLower);
+  // let passwordUpper = confirm ("Do you want at least 1 uppercase letter?")
+  // console.log(passwordUpper);
+  // let passwordNumber = confirm ("Do you want at least 1 whole number between 0-9?")
+  // console.log(passwordNumber)
+  // let passwordSymbol = confirm ("Do you want at least 1 symbol?")
+  // console.log(passwordSymbol);
 
 //   let password=""
 
