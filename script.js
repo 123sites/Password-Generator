@@ -9,26 +9,35 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
   let passwordLength = prompt("Please choose how many characters you want it, between 8-128 characters in length.");
-  console.log(passwordLength);
-  let value = RandomLower;
+  console.log("passwordLength: " + passwordLength);
+
+
+  if (passwordLength >= 8 && passwordLength <= 128) {
+  let passwordLower = confirm("Do you want at least 1 lowercase letter?")
+  console.log(passwordLower);
+  let passwordUpper = confirm ("Do you want at least 1 uppercase letter?")
+  console.log(passwordUpper);
+  let passwordNumber = confirm ("Do you want at least 1 whole number between 0-9?")
+  console.log(passwordNumber)
+  let passwordSymbol = confirm ("Do you want at least 1 symbol?")
+  console.log(passwordSymbol);
+  }
+
+
+
+
+  // let value = RandomLower;
+
   // passwordLength = confirm("");
 
 
-  // let passwordLower = 
-  // let passwordLower = confirm ("Do you want at least 1 lowercase letter?")
-  // console.log(passwordLower);
-  // let passwordUpper = confirm ("Do you want at least 1 uppercase letter?")
-  // console.log(passwordUpper);
-  // let passwordNumber = confirm ("Do you want at least 1 whole number between 0-9?")
-  // console.log(passwordNumber)
-  // let passwordSymbol = confirm ("Do you want at least 1 symbol?")
-  // console.log(passwordSymbol);
 
-//   let password=""
 
-// password
-//   confirm
-//   forLoop (for 10 times)
+  //   let password=""
+
+  // password
+  //   confirm
+  //   forLoop (for 10 times)
 
   return password;
 }
@@ -110,4 +119,4 @@ function getRandomSymbol() {
 console.log(getRandomSymbol());
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword)
