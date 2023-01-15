@@ -10,7 +10,6 @@ var generateBtn = document.querySelector("#generate");
 let userChoice = []
 let finalPassword = []
 
-
 function generatePassword() {
   let passwordLength = prompt("Please choose how many characters you want it, between 8-128 characters in length.");
   console.log("passwordLength: " + passwordLength);
@@ -62,68 +61,37 @@ function generatePassword() {
 
   return finalPassword
 }
-// let value = RandomLower;
-
-// passwordLength = confirm("");
-
-// password
-//   confirm
-//   forLoop (for 10 times)
 
 // Write password to the #password input, including the criteria:
-
-
 // 1-RandomLower
 function RandomLower() {
   const lower = "asdfghjklqwertyuiopzxcvbnm";
   console.log(lower);
   return lower
 }
-// function getRandomLower() {
-//   const lower = ["asdfghjklqwertyuiopzxcvbnm"];
-//   return String.fromCharCode(Math.floor(Math.random() * 26 + 97));
-// }
-// console.log(getRandomLower());
-
-// 2-RandomUpper
-//function RandomUpper() {
- // console.log("Uppercase letter: ");
-//}
 
 function getRandomUpper() {
   const upper = "ASDFGHJKLZXCVBNMQWERTYUIOP";
   return upper
-  //return String.fromCharCode(Math.floor(Math.random() * 26 + 65));
 }
-//console.log(getRandomUpper());
 
 function getRandomNumber() {
   const numbers = "0123456789";
   return numbers
-  //return numbers[Math.floor(Math.random() * numbers.length)];
 }
 
 // Generate numbers 0-9, including 0 and 9
-//console.log(getRandomNumber());
-
-
 // 4-RandomSpecialCharacters
 function getRandomSymbol() {
   const symbols = "'~!@#$%^&*()+=<>/?";
   return symbols
-
 }
-
-
-  
-
 
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password.join("");
-
 }
 
 // Add event listener to generate button
