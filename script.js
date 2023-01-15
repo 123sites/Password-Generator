@@ -51,7 +51,6 @@ function generatePassword() {
 
     for (let i = 0; i < passwordLength; i++) {
       finalPassword.push(userChoice[Math.floor(Math.random() * userChoice.length)])
-      
     }
 
   }
