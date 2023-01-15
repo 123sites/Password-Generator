@@ -1,9 +1,9 @@
 // Assignment Code
 
 // 8-128 characters long
-// Confirm whether or not to include lowrcase, upper, numeric, and/or special characters.
+// Confirm whether or not to include lowercase, upper, numeric, and/or special characters.
 // Input should be validated & at least 1 character type should be selected.
-// Afterwards, a password is displayed in an alert or written to the page.
+// Afterwards, a password is displayed and written onto the webpage.
 
 var generateBtn = document.querySelector("#generate");
 

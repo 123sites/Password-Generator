@@ -22,7 +22,7 @@ The link to the Random-Password-Generator is at:
 
 <img src="/Random-Password-Generator/Images/Laptop_Screenshot.png" alt="Laptop View">
 
-<img src="/Random-Password-Generator/Images/Cell phone screenshot.png " alt="Cell Phone View">
+<img src="/Random-Password-Generator/Images/Cell phone screenshot.png" alt="Cell Phone View">
 
 ## Credits 👈
 
