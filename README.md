@@ -16,7 +16,7 @@ There weren't any installations with this project.  You can find the link to the
 [Repository link](https://github.com/123sites?tab=repositories)
 
 The link to the Random-Password-Generator is at:
-[Random-Password-Generator Link]()
+[Random-Password-Generator Link](https://github.com/123sites/Random-Password-Generator.git)
 
 ## Screenshots 🎯
 
